@@ -1,11 +1,11 @@
 library(readxl)
 library(ggplot2)
 library(dplyr)
-#library(ggpubr)
+library(stringr)
 library(data.table)
 
 #sets the directory to where your file is
-setwd('C:/Users/Lenovo/Desktop') 
+setwd('C:/Users/Lenovo/Documents/GitHub/eye_tracking_ufabc')
 
 #Reads data
 data = 
@@ -48,16 +48,64 @@ for(i in 1:length(criancas)){ #for each trial from each participant
   
   }
 }
-
+View(criancas)
 #Reunites data frame
 criancas = 
   dplyr::bind_rows(criancas)
 
 #Reorders data frame based on participant's name
 criancas = criancas[order(criancas$RECORDING_SESSION_LABEL, criancas$TRIAL_INDEX),]
-data = data[order(data$RECORDING_SESSION_LABEL, data$TRIAL_INDEX),]
+
+
+#################
+## SECOND TASK ##
+#################
+data = 
+  read_excel('babies_times.xlsx')
+
+data$CRUZ_START <- c(3750, 3071, "baseline", 3740, 4237, "baseline", 3740, 3071, 3740, 3872, 3741, 3872, 4240, 3740, "baseline")
+data$CRUZ_END <- c(4250, 3571, "baseline", 4240, 4737, "baseline", 4240, 3571, 4240, 4372, 4241, 4372, 4740, 4240,  "baseline")
+
+#antes, durante depois da cruz
+#data =
+#  split(criancas, criancas$)
+
+#Retirando .avi para ficar igual ao documento babies_times.xlsx
+criancas$video_clip <- 
+  str_replace(criancas$video_clip,".avi","")
+
+
+#Adding info from babies_times.xlsx
+criancas = 
+  merge(criancas, data, by.x = "video_clip", by.y = "...1", all = F)
+
+#Reorder
+criancas = 
+  criancas[order(criancas$RECORDING_SESSION_LABEL, criancas$TRIAL_INDEX),]
+
+criancas$parte_trial <- 'baseline'
+
+for(i in 1:nrow(criancas)){
+  if(criancas$CRUZ_START[[i]] != 'baseline'){
+    if(criancas$anchor_time[[i]] < as.numeric(criancas$CRUZ_START[[i]])){
+     criancas$parte_trial[[i]] = 'pre_cruz'
+    }
+    if( (criancas$anchor_time[[i]] > as.numeric(criancas$CRUZ_START[[i]])) && (criancas$anchor_time[[i]] < as.numeric(criancas$CRUZ_END[[i]])) ){
+      criancas$parte_trial[[i]] = 'cruz'
+    }
+    if(criancas$anchor_time[[i]] > as.numeric(criancas$CRUZ_END[[i]])){
+      criancas$parte_trial[[i]] = 'pos_cruz'
+    }
+  }
+}
+
+#Printa a frequencia de trials por tipo
+table(criancas$parte_trial)
+
+
 
 #writes the file to the current directory in your pc
-write.csv(criancas, "dados_tratados.csv")
-criancas$CURRENT_FIX_START == data$CURRENT_FIX_START
-criancas$RECORDING_SESSION_LABEL == data$RECORDING_SESSION_LABEL
+write.csv(criancas, "dados_tratados2.csv")
+
+#criancas$CURRENT_FIX_START == data$CURRENT_FIX_START
+#criancas$RECORDING_SESSION_LABEL == data$RECORDING_SESSION_LABEL
