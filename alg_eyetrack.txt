@@ -1,4 +1,0 @@
-when videoclip == video_name_end: 
-	latencia = current fixation start;
-
-current_fixation_start[index_latencia:fim_de_trial] = current_fixation_start - latencia
