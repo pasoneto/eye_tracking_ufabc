@@ -48,7 +48,7 @@ for(i in 1:length(criancas)){ #for each trial from each participant
   
   }
 }
-View(criancas)
+
 #Reunites data frame
 criancas = 
   dplyr::bind_rows(criancas)

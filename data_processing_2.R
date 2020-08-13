@@ -70,28 +70,21 @@ for(i in 1:length(data)){
 data = 
   dplyr::bind_rows(data)
 
+###################################
+## SUMMARIZING BY BABY AND TRIAL ##
+###################################
 
-#fail
-#teste <- plyr::ddply(data, c("video", "crianca"), summarise,
-#                   frente_fundo = alternancia(acerto_frente, acerto_fundo),
-#                   fundo_frente = alternancia(acerto_fundo, acerto_frente),
-#                   fundo_errado = alternancia(acerto_fundo, olhou_pro_errado),
-#                   errado_fundo = alternancia(olhou_pro_errado, acerto_fundo),
-#                   frente_errado = alternancia(acerto_frente, olhou_pro_errado),
-#                   errado_frente = alternancia(olhou_pro_errado, acerto_frente)
-#                   )
+teste <- plyr::ddply(data, c('crianca', 'video'), summarise,
 
+                    frente_fundo = mean(frente_fundo, na.rm = T),
+                    fundo_frente = mean(fundo_frente, na.rm = T),
+                    fundo_errado = mean(fundo_errado, na.rm = T),
+                    errado_fundo = mean(errado_fundo, na.rm = T),
+                    frente_errado = mean(frente_errado, na.rm = T),
+                    errado_frente = mean(errado_frente, na.rm = T),
+                    olhou_frente = max(errado_frente)
+                    
+)
 
-
-
-#Verificando prevalencia de fixação e acerto
-plot<- plyr::ddply(data, c("video", "crianca", "parte"), summarise,
-                   fixacoes    = length(parte),
-                   acerto_fundo = sum(acerto_fundo),
-                   acerto_frente = sum(acerto_frente),
-                   olhou_pro_errado = sum(olhou_pro_errado)
-                   )
-
-
-write.csv(plot, "fixacao.csv")
+write.csv(teste, 'alternancia.csv')
 
