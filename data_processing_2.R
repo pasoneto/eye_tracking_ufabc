@@ -82,8 +82,8 @@ teste <- plyr::ddply(data, c('crianca', 'video'), summarise,
                     errado_fundo = mean(errado_fundo, na.rm = T),
                     frente_errado = mean(frente_errado, na.rm = T),
                     errado_frente = mean(errado_frente, na.rm = T),
-                    olhou_frente = max(errado_frente)
-                    
+                    olhou_frente = max(acerto_frente),
+                    olhou_errado = max(olhou_pro_errado)
 )
 
 write.csv(teste, 'alternancia.csv')

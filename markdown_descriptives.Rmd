@@ -1,0 +1,148 @@
+---
+title: ""
+output: html_document
+---
+##Instruções
+
+Para reproduzir o código abaixo, baixe o arquivo [aqui](data/alternancia.csv). Instale tambem os pacotes dplyr e data.table assim: install.packages("nome_do_pacote").
+
+```{r 0, message=FALSE}
+library(dplyr)
+library(data.table)
+options(warn = -1) 
+```
+
+```{r setup, message=FALSE}
+#MUDE O DIRETORIO PARA ONDE VOCÊ SALVOU O ARQUIVO
+setwd('C:/Users/Lenovo/Documents/GitHub/eye_tracking_ufabc/data')
+
+data =
+  fread("alternancia.csv")[, 2: ncol(fread("alternancia.csv"))]
+
+data =
+  filter(data, 
+          data$dado_bom == 1
+  )
+```
+
+<center> <h1>Descritivas</h1> </center> 
+
+##1) Média de acerto (olhou frente) por condição IJA e RJA e ano
+
+```{r setup2, echo=TRUE}
+d <- plyr::ddply(data, c('condicao', '`SessÌ£o`', '`pre/pos`'), summarise,
+                           
+                 olhou_frente_mean = mean(olhou_frente, na.rm = T),
+                 olhou_frente_sum = sum(olhou_frente),
+                 n_frente = length(olhou_frente)
+
+)
+d[order(d$`SessÌ£o`),]
+```
+
+##2) Média de erro (olhou errado) por condição IJA e RJA e ano
+
+```{r setup3, echo=TRUE}
+d <- plyr::ddply(data, c('condicao', '`SessÌ£o`', '`pre/pos`'), summarise,
+
+                 olhou_errado_mean = mean(olhou_errado, na.rm = T),
+                 olhou_errado_sum = sum(olhou_errado),
+                 n_errado = length(olhou_errado)
+)
+d[order(d$`SessÌ£o`),]
+```
+
+
+##3) Médias de alternancia rosto-brinquedo (fundo-frente) e brinquedo-rosto (frente - fundo)
+
+```{r setup4, echo=TRUE}
+d <- plyr::ddply(data, c('condicao', '`SessÌ£o`', '`pre/pos`'), summarise,
+
+                 fundo_frente = mean(fundo_frente, na.rm = T),
+                 frente_fundo = mean(frente_fundo, na.rm = T)
+
+)
+d[order(d$`SessÌ£o`),]
+```
+
+##4) Média de alternancia brinquedo alvo (frente-errado) e brinquedo não alvo (errado-frente) 
+
+```{r setup6, echo=TRUE}
+d <- plyr::ddply(data, c('condicao', '`SessÌ£o`', '`pre/pos`'), summarise,
+
+                 frente_errado = mean(frente_errado, na.rm = T),
+                 errado_frente = mean(errado_frente, na.rm = T)
+)
+d[order(d$`SessÌ£o`),]
+```
+
+
+<center> <h1>Longitudinal</h1> </center> 
+
+
+
+##1) Média de acerto (olhou frente) por condição IJA e RJA e ano
+
+```{r setup1b, include=FALSE}
+for(i in 1:length(data$alternancia_rja)){
+  if(is.na(data$alternancia_rja[i] )){
+    data$alternancia_rja[i] = 0
+  }
+}
+
+for(i in 1:length(data$alternancia_ija)){
+  if(is.na(data$alternancia_ija[i] )){
+    data$alternancia_ija[i] = 0
+  }
+}
+```
+
+```{r setup2b, echo=TRUE}
+
+d <- plyr::ddply(filter(data, !is.na(data$longitudinal)), c('condicao', '`pre/pos`'), summarise,
+                           
+                 olhou_frente_mean = mean(olhou_frente, na.rm = T),
+                 olhou_frente_sum = sum(olhou_frente),
+                 n_frente = length(olhou_frente)
+
+)
+d
+```
+
+##2) Média de erro (olhou errado) por condição IJA e RJA e ano
+
+```{r setup3b, echo=TRUE}
+d <- plyr::ddply(filter(data, !is.na(data$longitudinal)), c('condicao', '`pre/pos`'), summarise,
+
+                 olhou_errado_mean = mean(olhou_errado, na.rm = T),
+                 olhou_errado_sum = sum(olhou_errado),
+                 n_errado = length(olhou_errado)
+)
+d
+```
+
+##3) Médias de alternancia rosto-brinquedo (fundo-frente) e brinquedo-rosto (frente - fundo)
+
+```{r setup4b, echo=TRUE}
+d <- plyr::ddply(filter(data, !is.na(data$longitudinal)), c('condicao', '`pre/pos`'), summarise,
+
+                 fundo_frente = mean(fundo_frente, na.rm = T),
+                 frente_fundo = mean(frente_fundo, na.rm = T)
+
+)
+d
+```
+
+##4) Média de alternancia brinquedo alvo (frente-errado) e brinquedo não alvo (errado-frente) 
+
+```{r setup5b, echo=TRUE}
+d <- plyr::ddply(filter(data, !is.na(data$longitudinal)), c('condicao', '`pre/pos`'), summarise,
+
+                 frente_errado = mean(frente_errado, na.rm = T),
+                 errado_frente = mean(errado_frente, na.rm = T)
+)
+d
+```
+
+
+
