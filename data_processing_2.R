@@ -32,6 +32,33 @@ alternancia = function(vector1, vector2){
 }
 
 
+#fixation acerto frente
+#fixation olhou pro errado
+#tirar -40ms
+#tirar tudo que estiver em cima da ultima_cruz
+
+fix_dur_sum = function(var1, var2, parte, primeiro){
+  
+  #will return the first value of var2 if var1 is true
+  if(isTRUE(primeiro)){
+    for(j in 1:length(var1)){
+      if( (isTRUE(var1[j])) & (parte[j] != 'ultima_cruz') ){
+        return(var2[j])
+      }
+    }
+  } else {
+    
+    #will sum up values of var2 every time var1 is true
+    count = 0
+    for(j in 1:length(var1)){
+      if( (isTRUE(var1[j])) & (parte[j] != 'ultima_cruz') ){
+        count = count + as.numeric(var2[j]) 
+      }
+    }
+    return(count)
+  }
+}
+
 ########################
 ## APPLYING FUNCTIONS ##
 ########################
@@ -40,7 +67,7 @@ alternancia = function(vector1, vector2){
 setwd('C:/Users/Lenovo/Documents/GitHub/eye_tracking_ufabc/data')
 
 data =
-  fread("complete.csv")[, 3:ncol(fread("complete.csv"))]
+  fread("dp1a.csv")[, 2:ncol(fread("dp1a.csv"))]
 
 data =
   data[, parte := last_element(parte,'cruz','ultima_cruz'),
@@ -56,35 +83,36 @@ data =
         list(data$crianca, 
              data$video))
 
+
 for(i in 1:length(data)){
   if(nrow(data[[i]]) != 0){
+    
     data[[i]]$frente_fundo = alternancia(data[[i]]$acerto_frente, data[[i]]$acerto_fundo)
     data[[i]]$fundo_frente = alternancia(data[[i]]$acerto_fundo, data[[i]]$acerto_frente)
     data[[i]]$fundo_errado = alternancia(data[[i]]$acerto_fundo, data[[i]]$olhou_pro_errado)
     data[[i]]$errado_fundo = alternancia(data[[i]]$olhou_pro_errado, data[[i]]$acerto_fundo)
     data[[i]]$frente_errado = alternancia(data[[i]]$acerto_frente, data[[i]]$olhou_pro_errado)
     data[[i]]$errado_frente = alternancia(data[[i]]$olhou_pro_errado, data[[i]]$acerto_frente)
+
+    data[[i]]$indice_alternancia_rja = (data[[i]]$fundo_frente - data[[i]]$fundo_errado)/(data[[i]]$fundo_frente + data[[i]]$fundo_errado)
+    data[[i]]$indice_alternancia_ija = (data[[i]]$frente_fundo - data[[i]]$errado_fundo)/(data[[i]]$frente_fundo + data[[i]]$errado_fundo)
+  
+    data[[i]]$indice_alternancia_objeto = (data[[i]]$frente_errado - data[[i]]$errado_frente)/(data[[i]]$frente_errado + data[[i]]$errado_frente)
+        
+    data[[i]]$fixation_acerto_frente = fix_dur_sum(data[[i]]$acerto_frente, data[[i]]$cur_fix_dur, data[[i]]$parte, primeiro = TRUE)
+    data[[i]]$fixation_olhou_pro_errado = fix_dur_sum(data[[i]]$olhou_pro_errado, data[[i]]$cur_fix_dur, data[[i]]$parte, primeiro = TRUE)
+    
+    data[[i]]$total_acerto_frente = fix_dur_sum(data[[i]]$acerto_frente, data[[i]]$cur_fix_dur, data[[i]]$parte, primeiro = FALSE)
+    data[[i]]$total_olhou_errado = fix_dur_sum(data[[i]]$olhou_pro_errado, data[[i]]$cur_fix_dur, data[[i]]$parte, primeiro = FALSE)
   }
 }
 
 data = 
   dplyr::bind_rows(data)
 
-###################################
-## SUMMARIZING BY BABY AND TRIAL ##
-###################################
+#removing NAs
+data[is.na(data)] <- 0
 
-teste <- plyr::ddply(data, c('crianca', 'video'), summarise,
+write.csv(data, 'dp2.csv')
 
-                    frente_fundo = mean(frente_fundo, na.rm = T),
-                    fundo_frente = mean(fundo_frente, na.rm = T),
-                    fundo_errado = mean(fundo_errado, na.rm = T),
-                    errado_fundo = mean(errado_fundo, na.rm = T),
-                    frente_errado = mean(frente_errado, na.rm = T),
-                    errado_frente = mean(errado_frente, na.rm = T),
-                    olhou_frente = max(acerto_frente),
-                    olhou_errado = max(olhou_pro_errado)
-)
-
-write.csv(teste, 'alternancia.csv')
 

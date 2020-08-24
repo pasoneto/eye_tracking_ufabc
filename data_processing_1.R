@@ -9,7 +9,7 @@ setwd('C:/Users/Lenovo/Documents/GitHub/eye_tracking_ufabc/data')
 
 #Reads data
 data = 
-  fread('babies_rawdata.csv')
+  fread('data_inputs/babies_rawdata.csv')
 
 data$anchor_time <- 0 #creates empty vectors for anchor 
 data$correction_time <- 0 #creates empty vectors for new timing
@@ -61,7 +61,7 @@ criancas = criancas[order(criancas$RECORDING_SESSION_LABEL, criancas$TRIAL_INDEX
 ## SECOND TASK ##
 #################
 data = 
-  read_excel('babies_times.xlsx')
+  read_excel('data_inputs/babies_times.xlsx')
 
 data$CRUZ_START <- c(3750, 3071, "baseline", 3740, 4237, "baseline", 3740, 3071, 3740, 3872, 3741, 3872, 4240, 3740, "baseline")
 data$CRUZ_END <- c(4250, 3571, "baseline", 4240, 4737, "baseline", 4240, 3571, 4240, 4372, 4241, 4372, 4740, 4240,  "baseline")
@@ -103,7 +103,7 @@ for(i in 1:nrow(criancas)){
 ## TAGGING WITH ROIS ##
 #######################
 rois =
-  read_excel("roi.xlsx")
+  read_excel("data_inputs/roi.xlsx")
 
 #Adding info from babies_times.xlsx
 criancas = 
@@ -135,6 +135,7 @@ verificacao =
              time = criancas$anchor_time,
              parte = criancas$parte_trial,
              video = criancas$video_clip,
+             cur_fix_dur = criancas$CURRENT_FIX_DURATION,
              roi_frente_empirico = criancas$ROIfrente,
              roi_fundo_empirico = criancas$ROIfundo,
              roi_alvo_fundo = criancas$`Roi cabeça(fundo)`,
@@ -145,7 +146,7 @@ verificacao =
              olhou_pro_errado = criancas$olhou_pro_errado,
              referencia = criancas$`Estímulo(referencia esq/dir - olhando para tela)`)
 
-#write.csv(verificacao, "final_task.csv")
+write.csv(verificacao, "dp1a.csv")
 
 ################# #Começar daqui
 ## FINAL TASKS ##
@@ -154,7 +155,7 @@ verificacao =
 rm(list=ls()) #cleans directory
 
 data =
-  fread("complete.csv")[, 3:ncol(fread("complete.csv"))]
+  fread("dp1a.csv")[, 2:ncol(fread("dp1a.csv"))]
 
 data =
   filter(data, 
@@ -195,7 +196,7 @@ fixou_cruz <- plyr::ddply(data, c('crianca', 'video', 'referencia'), summarise,
 ####################################
 
 data =
-  fread("complete.csv")
+  fread("dp1a.csv")[, 2:ncol(fread("dp1a.csv"))]
 
 data =
   filter(data, 
@@ -237,8 +238,6 @@ for(i in 1:length(data)){
 
 data =
   dplyr::bind_rows(data)
-
-data$referencia[1] == "RJA - olhar pra direita (adulto)"
 
 certo_errado <- plyr::ddply(data, c('crianca', 'video', 'referencia'), summarise,
                           acertou_frente = mean(acertou_frente, na.rm = TRUE),
