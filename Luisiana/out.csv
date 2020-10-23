@@ -1,0 +1,221 @@
+"","V1","crianca","dominio","condicao","nota_esc","outliers"
+"1",1,"Anelise Klein Vasconcelos Dias","cognitivo","pos",11,0
+"2",2,"Anelise Klein Vasconcelos Dias","cognitivo","pre",11,0
+"3",3,"Anelise Klein Vasconcelos Dias","comportamento adaptativo","pos",10.9,0
+"4",4,"Anelise Klein Vasconcelos Dias","comportamento adaptativo","pre",11.9,0
+"5",5,"Anelise Klein Vasconcelos Dias","linguagem","pos",14,0
+"6",6,"Anelise Klein Vasconcelos Dias","linguagem","pre",8.5,0
+"7",7,"Anelise Klein Vasconcelos Dias","motora","pos",12,0
+"8",8,"Anelise Klein Vasconcelos Dias","motora","pre",8.5,0
+"9",9,"Anelise Klein Vasconcelos Dias","socioemocional","pos",9,0
+"10",10,"Anelise Klein Vasconcelos Dias","socioemocional","pre",9,0
+"11",11,"Anne Longhi Germano","cognitivo","pos",15,0
+"12",12,"Anne Longhi Germano","cognitivo","pre",14,0
+"13",13,"Anne Longhi Germano","comportamento adaptativo","pos",12,0
+"14",14,"Anne Longhi Germano","comportamento adaptativo","pre",11.8,0
+"15",15,"Anne Longhi Germano","linguagem","pos",11,0
+"16",16,"Anne Longhi Germano","linguagem","pre",14,0
+"17",17,"Anne Longhi Germano","motora","pos",12.5,0
+"18",18,"Anne Longhi Germano","motora","pre",9.5,0
+"19",19,"Anne Longhi Germano","socioemocional","pos",10,0
+"20",20,"Anne Longhi Germano","socioemocional","pre",11,0
+"21",21,"Asafe Paschon Cordeiro","cognitivo","pos",9,0
+"22",22,"Asafe Paschon Cordeiro","cognitivo","pre",7,1
+"23",23,"Asafe Paschon Cordeiro","comportamento adaptativo","pos",8.5,0
+"24",24,"Asafe Paschon Cordeiro","comportamento adaptativo","pre",8.8,0
+"25",25,"Asafe Paschon Cordeiro","linguagem","pos",5.5,0
+"26",26,"Asafe Paschon Cordeiro","linguagem","pre",5.5,0
+"27",27,"Asafe Paschon Cordeiro","motora","pos",6.5,0
+"28",28,"Asafe Paschon Cordeiro","motora","pre",4.5,1
+"29",29,"Asafe Paschon Cordeiro","socioemocional","pos",13,0
+"30",30,"Asafe Paschon Cordeiro","socioemocional","pre",11,0
+"31",31,"Ayla Prates Duarte de Souza","cognitivo","pos",12,0
+"32",32,"Ayla Prates Duarte de Souza","cognitivo","pre",12,0
+"33",33,"Ayla Prates Duarte de Souza","comportamento adaptativo","pos",9.8,0
+"34",34,"Ayla Prates Duarte de Souza","comportamento adaptativo","pre",10.4,0
+"35",35,"Ayla Prates Duarte de Souza","linguagem","pos",10.5,0
+"36",36,"Ayla Prates Duarte de Souza","linguagem","pre",10,0
+"37",37,"Ayla Prates Duarte de Souza","motora","pos",11,0
+"38",38,"Ayla Prates Duarte de Souza","motora","pre",10,0
+"39",39,"Ayla Prates Duarte de Souza","socioemocional","pos",12,0
+"40",40,"Ayla Prates Duarte de Souza","socioemocional","pre",10,0
+"41",41,"Clarisse Hernann Pereira","cognitivo","pos",11,0
+"42",42,"Clarisse Hernann Pereira","cognitivo","pre",11,0
+"43",43,"Clarisse Hernann Pereira","comportamento adaptativo","pos",11.4,0
+"44",44,"Clarisse Hernann Pereira","comportamento adaptativo","pre",10.6,0
+"45",45,"Clarisse Hernann Pereira","linguagem","pos",9.5,0
+"46",46,"Clarisse Hernann Pereira","linguagem","pre",9.5,0
+"47",47,"Clarisse Hernann Pereira","motora","pos",10.5,0
+"48",48,"Clarisse Hernann Pereira","motora","pre",8.5,0
+"49",49,"Clarisse Hernann Pereira","socioemocional","pos",11,0
+"50",50,"Clarisse Hernann Pereira","socioemocional","pre",7,0
+"51",51,"Eduardo M S. Barguena","cognitivo","pos",19,0
+"52",52,"Eduardo M S. Barguena","cognitivo","pre",2,1
+"53",53,"Eduardo M S. Barguena","comportamento adaptativo","pos",13.6,0
+"54",54,"Eduardo M S. Barguena","comportamento adaptativo","pre",13.6,0
+"55",55,"Eduardo M S. Barguena","linguagem","pos",17,0
+"56",56,"Eduardo M S. Barguena","linguagem","pre",14,0
+"57",57,"Eduardo M S. Barguena","motora","pos",16,0
+"58",58,"Eduardo M S. Barguena","motora","pre",14,0
+"59",59,"Eduardo M S. Barguena","socioemocional","pos",17,0
+"60",60,"Eduardo M S. Barguena","socioemocional","pre",19,2
+"61",61,"Emanuela Rodrigues Santos","cognitivo","pos",11,0
+"62",62,"Emanuela Rodrigues Santos","cognitivo","pre",11,0
+"63",63,"Emanuela Rodrigues Santos","comportamento adaptativo","pos",12,0
+"64",64,"Emanuela Rodrigues Santos","comportamento adaptativo","pre",10.8,0
+"65",65,"Emanuela Rodrigues Santos","linguagem","pos",7,0
+"66",66,"Emanuela Rodrigues Santos","linguagem","pre",6,0
+"67",67,"Emanuela Rodrigues Santos","motora","pos",9,0
+"68",68,"Emanuela Rodrigues Santos","motora","pre",8.5,0
+"69",69,"Emanuela Rodrigues Santos","socioemocional","pos",7,0
+"70",70,"Emanuela Rodrigues Santos","socioemocional","pre",11,0
+"71",71,"Gabriela Barbara Gomes Fonseca","cognitivo","pos",14,0
+"72",72,"Gabriela Barbara Gomes Fonseca","cognitivo","pre",10,0
+"73",73,"Gabriela Barbara Gomes Fonseca","comportamento adaptativo","pos",14.3,0
+"74",74,"Gabriela Barbara Gomes Fonseca","comportamento adaptativo","pre",14.4,0
+"75",75,"Gabriela Barbara Gomes Fonseca","linguagem","pos",12,0
+"76",76,"Gabriela Barbara Gomes Fonseca","linguagem","pre",13.5,0
+"77",77,"Gabriela Barbara Gomes Fonseca","motora","pos",13,0
+"78",78,"Gabriela Barbara Gomes Fonseca","motora","pre",9,0
+"79",79,"Gabriela Barbara Gomes Fonseca","socioemocional","pos",14,0
+"80",80,"Gabriela Barbara Gomes Fonseca","socioemocional","pre",15,0
+"81",81,"Gabriela Teixeira Felix","cognitivo","pos",13,0
+"82",82,"Gabriela Teixeira Felix","cognitivo","pre",9,0
+"83",83,"Gabriela Teixeira Felix","comportamento adaptativo","pos",7.6,0
+"84",84,"Gabriela Teixeira Felix","comportamento adaptativo","pre",7.7,0
+"85",85,"Gabriela Teixeira Felix","linguagem","pos",8.5,0
+"86",86,"Gabriela Teixeira Felix","linguagem","pre",9,0
+"87",87,"Gabriela Teixeira Felix","motora","pos",10,0
+"88",88,"Gabriela Teixeira Felix","motora","pre",8.5,0
+"89",89,"Gabriela Teixeira Felix","socioemocional","pos",8,0
+"90",90,"Gabriela Teixeira Felix","socioemocional","pre",8,0
+"91",91,"Guilherme Visebeli de Carvalho","cognitivo","pos",9,0
+"92",92,"Guilherme Visebeli de Carvalho","cognitivo","pre",11,0
+"93",93,"Guilherme Visebeli de Carvalho","comportamento adaptativo","pos",9.2,0
+"94",94,"Guilherme Visebeli de Carvalho","comportamento adaptativo","pre",11.5,0
+"95",95,"Guilherme Visebeli de Carvalho","linguagem","pos",6.5,0
+"96",96,"Guilherme Visebeli de Carvalho","linguagem","pre",5,0
+"97",97,"Guilherme Visebeli de Carvalho","motora","pos",9,0
+"98",98,"Guilherme Visebeli de Carvalho","motora","pre",9.5,0
+"99",99,"Guilherme Visebeli de Carvalho","socioemocional","pos",13,0
+"100",100,"Guilherme Visebeli de Carvalho","socioemocional","pre",19,2
+"101",101,"Heitor Melo Castro","cognitivo","pos",8,0
+"102",102,"Heitor Melo Castro","cognitivo","pre",11,0
+"103",103,"Heitor Melo Castro","comportamento adaptativo","pos",11.2,0
+"104",104,"Heitor Melo Castro","comportamento adaptativo","pre",9.6,0
+"105",105,"Heitor Melo Castro","linguagem","pos",10.5,0
+"106",106,"Heitor Melo Castro","linguagem","pre",6.5,0
+"107",107,"Heitor Melo Castro","motora","pos",10,0
+"108",108,"Heitor Melo Castro","motora","pre",10,0
+"109",109,"Heitor Melo Castro","socioemocional","pos",10,0
+"110",110,"Heitor Melo Castro","socioemocional","pre",9,0
+"111",111,"Ingrid L. F Bessa","cognitivo","pos",10,0
+"112",112,"Ingrid L. F Bessa","cognitivo","pre",12,0
+"113",113,"Ingrid L. F Bessa","comportamento adaptativo","pos",6.3,0
+"114",114,"Ingrid L. F Bessa","comportamento adaptativo","pre",8.9,0
+"115",115,"Ingrid L. F Bessa","linguagem","pos",9.5,0
+"116",116,"Ingrid L. F Bessa","linguagem","pre",10.5,0
+"117",117,"Ingrid L. F Bessa","motora","pos",10,0
+"118",118,"Ingrid L. F Bessa","motora","pre",9.5,0
+"119",119,"Ingrid L. F Bessa","socioemocional","pos",19,2
+"120",120,"Ingrid L. F Bessa","socioemocional","pre",10,0
+"121",121,"João Paulo Magalhães Rodrigues","cognitivo","pos",17,0
+"122",122,"João Paulo Magalhães Rodrigues","cognitivo","pre",10,0
+"123",123,"João Paulo Magalhães Rodrigues","comportamento adaptativo","pos",9,0
+"124",124,"João Paulo Magalhães Rodrigues","comportamento adaptativo","pre",11.2,0
+"125",125,"João Paulo Magalhães Rodrigues","linguagem","pos",12,0
+"126",126,"João Paulo Magalhães Rodrigues","linguagem","pre",12,0
+"127",127,"João Paulo Magalhães Rodrigues","motora","pos",10.5,0
+"128",128,"João Paulo Magalhães Rodrigues","motora","pre",10.5,0
+"129",129,"João Paulo Magalhães Rodrigues","socioemocional","pos",10,0
+"130",130,"João Paulo Magalhães Rodrigues","socioemocional","pre",12,0
+"131",131,"Lívia Barros Berdnikoff","cognitivo","pos",11,0
+"132",132,"Lívia Barros Berdnikoff","cognitivo","pre",11,0
+"133",133,"Lívia Barros Berdnikoff","comportamento adaptativo","pos",11.5,0
+"134",134,"Lívia Barros Berdnikoff","comportamento adaptativo","pre",11.1,0
+"135",135,"Lívia Barros Berdnikoff","linguagem","pos",6.5,0
+"136",136,"Lívia Barros Berdnikoff","linguagem","pre",14,0
+"137",137,"Lívia Barros Berdnikoff","motora","pos",9.5,0
+"138",138,"Lívia Barros Berdnikoff","motora","pre",11,0
+"139",139,"Lívia Barros Berdnikoff","socioemocional","pos",11,0
+"140",140,"Lívia Barros Berdnikoff","socioemocional","pre",13,0
+"141",141,"Lucas Soares Teixeira","cognitivo","pos",19,0
+"142",142,"Lucas Soares Teixeira","cognitivo","pre",18,2
+"143",143,"Lucas Soares Teixeira","comportamento adaptativo","pos",12,0
+"144",144,"Lucas Soares Teixeira","comportamento adaptativo","pre",10,0
+"145",145,"Lucas Soares Teixeira","linguagem","pos",14.5,0
+"146",146,"Lucas Soares Teixeira","linguagem","pre",13,0
+"147",147,"Lucas Soares Teixeira","motora","pos",13.5,0
+"148",148,"Lucas Soares Teixeira","motora","pre",11,0
+"149",149,"Lucas Soares Teixeira","socioemocional","pos",10,0
+"150",150,"Lucas Soares Teixeira","socioemocional","pre",9,0
+"151",151,"Manuela Gonçalves Leles","cognitivo","pos",15,0
+"152",152,"Manuela Gonçalves Leles","cognitivo","pre",15,2
+"153",153,"Manuela Gonçalves Leles","comportamento adaptativo","pos",11.6,0
+"154",154,"Manuela Gonçalves Leles","comportamento adaptativo","pre",10.3,0
+"155",155,"Manuela Gonçalves Leles","linguagem","pos",9.5,0
+"156",156,"Manuela Gonçalves Leles","linguagem","pre",12.5,0
+"157",157,"Manuela Gonçalves Leles","motora","pos",12.5,0
+"158",158,"Manuela Gonçalves Leles","motora","pre",13,0
+"159",159,"Manuela Gonçalves Leles","socioemocional","pos",12,0
+"160",160,"Manuela Gonçalves Leles","socioemocional","pre",11,0
+"161",161,"Maria Luisa Sousa da Costa","cognitivo","pos",13,0
+"162",162,"Maria Luisa Sousa da Costa","cognitivo","pre",10,0
+"163",163,"Maria Luisa Sousa da Costa","comportamento adaptativo","pos",9.2,0
+"164",164,"Maria Luisa Sousa da Costa","comportamento adaptativo","pre",12.5,0
+"165",165,"Maria Luisa Sousa da Costa","linguagem","pos",10.5,0
+"166",166,"Maria Luisa Sousa da Costa","linguagem","pre",12,0
+"167",167,"Maria Luisa Sousa da Costa","motora","pos",10.5,0
+"168",168,"Maria Luisa Sousa da Costa","motora","pre",11,0
+"169",169,"Maria Luisa Sousa da Costa","socioemocional","pos",12,0
+"170",170,"Maria Luisa Sousa da Costa","socioemocional","pre",9,0
+"171",171,"Pedro Pita Figueiredo","cognitivo","pos",11,0
+"172",172,"Pedro Pita Figueiredo","cognitivo","pre",11,0
+"173",173,"Pedro Pita Figueiredo","comportamento adaptativo","pos",8.3,0
+"174",174,"Pedro Pita Figueiredo","comportamento adaptativo","pre",9.9,0
+"175",175,"Pedro Pita Figueiredo","linguagem","pos",11,0
+"176",176,"Pedro Pita Figueiredo","linguagem","pre",11.5,0
+"177",177,"Pedro Pita Figueiredo","motora","pos",9,0
+"178",178,"Pedro Pita Figueiredo","motora","pre",9,0
+"179",179,"Pedro Pita Figueiredo","socioemocional","pos",18,2
+"180",180,"Pedro Pita Figueiredo","socioemocional","pre",11,0
+"181",181,"Rafael Alcântara Cordeiro Rodrigues","cognitivo","pos",15,0
+"182",182,"Rafael Alcântara Cordeiro Rodrigues","cognitivo","pre",10,0
+"183",183,"Rafael Alcântara Cordeiro Rodrigues","comportamento adaptativo","pos",9.8,0
+"184",184,"Rafael Alcântara Cordeiro Rodrigues","comportamento adaptativo","pre",8.6,0
+"185",185,"Rafael Alcântara Cordeiro Rodrigues","linguagem","pos",6,0
+"186",186,"Rafael Alcântara Cordeiro Rodrigues","linguagem","pre",9.5,0
+"187",187,"Rafael Alcântara Cordeiro Rodrigues","motora","pos",11,0
+"188",188,"Rafael Alcântara Cordeiro Rodrigues","motora","pre",8.5,0
+"189",189,"Rafael Alcântara Cordeiro Rodrigues","socioemocional","pos",11,0
+"190",190,"Rafael Alcântara Cordeiro Rodrigues","socioemocional","pre",13,0
+"191",191,"Sarah Mohand Farid","cognitivo","pos",8,0
+"192",192,"Sarah Mohand Farid","cognitivo","pre",7,1
+"193",193,"Sarah Mohand Farid","comportamento adaptativo","pos",15.7,0
+"194",194,"Sarah Mohand Farid","comportamento adaptativo","pre",12.7,0
+"195",195,"Sarah Mohand Farid","linguagem","pos",5.5,0
+"196",196,"Sarah Mohand Farid","linguagem","pre",5.5,0
+"197",197,"Sarah Mohand Farid","motora","pos",8.5,0
+"198",198,"Sarah Mohand Farid","motora","pre",7.5,0
+"199",199,"Sarah Mohand Farid","socioemocional","pos",8,0
+"200",200,"Sarah Mohand Farid","socioemocional","pre",10,0
+"201",201,"Theo Sarro Ehnke","cognitivo","pos",15,0
+"202",202,"Theo Sarro Ehnke","cognitivo","pre",12,0
+"203",203,"Theo Sarro Ehnke","comportamento adaptativo","pos",11.7,0
+"204",204,"Theo Sarro Ehnke","comportamento adaptativo","pre",11.4,0
+"205",205,"Theo Sarro Ehnke","linguagem","pos",12.5,0
+"206",206,"Theo Sarro Ehnke","linguagem","pre",11,0
+"207",207,"Theo Sarro Ehnke","motora","pos",10.5,0
+"208",208,"Theo Sarro Ehnke","motora","pre",14,0
+"209",209,"Theo Sarro Ehnke","socioemocional","pos",9,0
+"210",210,"Theo Sarro Ehnke","socioemocional","pre",8,0
+"211",211,"Yara Momosso Carraca","cognitivo","pos",12,0
+"212",212,"Yara Momosso Carraca","cognitivo","pre",13,0
+"213",213,"Yara Momosso Carraca","comportamento adaptativo","pos",9.4,0
+"214",214,"Yara Momosso Carraca","comportamento adaptativo","pre",12,0
+"215",215,"Yara Momosso Carraca","linguagem","pos",13,0
+"216",216,"Yara Momosso Carraca","linguagem","pre",11,0
+"217",217,"Yara Momosso Carraca","motora","pos",14,0
+"218",218,"Yara Momosso Carraca","motora","pre",9,0
+"219",219,"Yara Momosso Carraca","socioemocional","pos",8,0
+"220",220,"Yara Momosso Carraca","socioemocional","pre",2,1
