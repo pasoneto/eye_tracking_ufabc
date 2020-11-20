@@ -5,7 +5,7 @@ library(stringr)
 library(data.table)
 
 #sets the directory to where your file is
-setwd('C:/Users/Lenovo/Documents/GitHub/eye_tracking_ufabc/data')
+setwd('/home/pasoneto/Documents/github/eye_tracking_ufabc')
 
 #Reads data
 data = 
@@ -99,6 +99,7 @@ for(i in 1:nrow(criancas)){
   }
 }
 
+
 #######################
 ## TAGGING WITH ROIS ##
 #######################
@@ -114,7 +115,7 @@ criancas =
 
 #checando se acertou olhando fundo (TRUE for right, False or NA for wrong)
 
-criancas$acerto_fundo = criancas$`Roi cabeça(fundo)` == criancas$ROIfundo
+criancas$acerto_fundo = criancas$`Roi cabeï¿½a(fundo)` == criancas$ROIfundo
 criancas$acerto_frente = criancas$`ROI alvo (frente)` == criancas$ROIfrente
 criancas$olhou_pro_errado = criancas$`ROI Nalvo (frente)` == criancas$ROIfrente
 
@@ -138,17 +139,17 @@ verificacao =
              cur_fix_dur = criancas$CURRENT_FIX_DURATION,
              roi_frente_empirico = criancas$ROIfrente,
              roi_fundo_empirico = criancas$ROIfundo,
-             roi_alvo_fundo = criancas$`Roi cabeça(fundo)`,
+             roi_alvo_fundo = criancas$`Roi cabeï¿½a(fundo)`,
              roi_alvo_frente = criancas$`ROI alvo (frente)`,
              roi_nao_alvo = criancas$`ROI Nalvo (frente)`,
              acerto_frente = criancas$acerto_frente,
              acerto_fundo = criancas$acerto_fundo,
              olhou_pro_errado = criancas$olhou_pro_errado,
-             referencia = criancas$`Estímulo(referencia esq/dir - olhando para tela)`)
+             referencia = criancas$`Estï¿½mulo(referencia esq/dir - olhando para tela)`)
 
 write.csv(verificacao, "dp1a.csv")
 
-################# #Começar daqui
+################# #Comeï¿½ar daqui
 ## FINAL TASKS ##
 #################
 
@@ -168,10 +169,10 @@ data =
   split(data, 
         list(data$crianca, data$video))
 
-#Contando o numero de acertos por criança e por trial
+#Contando o numero de acertos por crianï¿½a e por trial
 for(i in 1:length(data)){
   
-  if(  nrow(data[[i]]) != 0  ) { #tirando os casos onde não houve dado para trial
+  if(  nrow(data[[i]]) != 0  ) { #tirando os casos onde nï¿½o houve dado para trial
     
     if( nrow(filter(data[[i]], data[[i]]$acerto_fundo == 'TRUE')) != 0 ){
       acerto = 1
@@ -210,10 +211,10 @@ data =
   split(data, 
         list(data$crianca, data$video))
 
-#Contando o numero de acertos por criança e por trial
+#Contando o numero de acertos por crianï¿½a e por trial
 for(i in 1:length(data)){
   
-  if(  nrow(data[[i]]) != 0  ) { #tirando os casos onde não houve dado para trial
+  if(  nrow(data[[i]]) != 0  ) { #tirando os casos onde nï¿½o houve dado para trial
     
     if( nrow(filter(data[[i]], data[[i]]$acerto_frente == 'TRUE')) != 0 ){
       acerto_frente = 1
@@ -250,7 +251,7 @@ final =
 
 library(stringr)
 ##################
-## Visualização ##
+## Visualizaï¿½ï¿½o ##
 ##################
 final$referencia <- str_replace_all(final$referencia, " - brinquedo da esquerda se move (jovem)", '')
 final$referencia <- str_replace_all(final$referencia, "olhar para esquerda (adulto)", '')
@@ -293,7 +294,7 @@ write.csv(final, 'verificacao_2.csv')
 
 for(i in 1:length(data)){
   
-  if(  nrow(data[[i]]) != 0  ) { #tirando os casos onde não houve dado para trial
+  if(  nrow(data[[i]]) != 0  ) { #tirando os casos onde nï¿½o houve dado para trial
     
     data[[i]]$n_acerto_fundo = nrow(filter(data[[i]], data[[i]]$acerto_fundo == 'TRUE'))
     data[[i]]$n_acerto_frente = nrow(filter(data[[i]], data[[i]]$acerto_frente == 'TRUE'))
